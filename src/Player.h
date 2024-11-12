@@ -4,7 +4,7 @@
 
 #pragma once
 #include <SFML/Graphics.hpp>
-#include "math.h"
+#include <cmath>
 using namespace sf;
 
 class Player {
@@ -22,7 +22,7 @@ private:
     bool m_DownPressed;
     bool m_LeftPressed;
     bool m_RightPressed;
-    int m_Health;
+    float m_Health;
     int m_MaxHealth;
     Time m_LastHit;
     float m_Speed;

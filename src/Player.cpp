@@ -149,7 +149,8 @@ void Player::update(float elapsedTime, Vector2i mousePosition)
         m_Position.y = m_Arena.top + m_TileSize;
     }
     // Calculate the angle the player is facing
-    float angle = (atan2(mousePosition.y - m_Resolution.y / 2,
+    float
+    angle = (atan2(mousePosition.y - m_Resolution.y / 2,
     mousePosition.x - m_Resolution.x / 2)
     * 180) / M_PI;
     m_Sprite.setRotation(angle);
@@ -158,12 +159,12 @@ void Player::update(float elapsedTime, Vector2i mousePosition)
 void Player::upgradeSpeed()
 {
     // 20% speed upgrade
-    m_Speed += (START_SPEED * .2);
+    m_Speed += (START_SPEED * .2f);
 }
 void Player::upgradeHealth()
 {
     // 20% max health upgrade
-    m_MaxHealth += (START_HEALTH * .2);
+    m_MaxHealth += (START_HEALTH * .2f);
 }
 void Player::increaseHealthLevel(int amount)
 {
